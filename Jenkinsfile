@@ -4,14 +4,14 @@ pipeline{
 		DOCKERHUB_CREDENTIALS = credentials('DockerHub')
 	}
     stages {
-	    stage('name'){
+	  /*  stage('name'){
 		    steps {
 			    
 			    sh'echo $JOB_NAME'
-	                    sh'job=${JOB_NAME}'
-	                    sh'echo $job'
+	                  //  sh'job=${JOB_NAME}'
+	                 //   sh'echo $job'
 		    }
-	    }
+	    }*/
     
     
         
@@ -37,7 +37,8 @@ pipeline{
 	
 	 stage('docker build'){
 	     steps{
-		 sh'docker build -t spring-img .'
+		// sh'docker build -t spring-img .'
+		 sh 'docker build -t spring-img --build-arg dokcerjob=$JOB_NAME .'
 	     }
 	 } 
 	 stage('image check'){
