@@ -15,20 +15,20 @@ pipeline{
     
     
         
-//          stage('maven location') {
-//             steps {
+        stage('maven location') {
+             steps {
             
-//                 sh'''
-//                  pwd
-//                  cd /var/lib/jenkins/workspace/${JOB_NAME}/demo
-//                  ls
-//                  mvn clean
-//                  mvn install
+                sh'''
+                  pwd
+                  cd /var/lib/jenkins/workspace/${JOB_NAME}/demo
+                  ls
+                  mvn clean
+                  mvn install
               
               
-//                  '''
-//             }
-//         }
+                  '''
+             }
+         }
 	
 		    
 	
@@ -37,8 +37,8 @@ pipeline{
 	
 	 stage('docker build'){
 	     steps{
-		// sh'docker build -t spring-img .'
-		 sh 'docker build -t spring-img --build-arg dokcerjob=$JOB_NAME .'
+		 sh'docker build -t spring-img .'
+		// sh 'docker build -t spring-img --build-arg dokcerjob=$JOB_NAME .'
 	     }
 	 } 
 	 stage('image check'){
