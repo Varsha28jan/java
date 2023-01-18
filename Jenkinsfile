@@ -69,7 +69,7 @@ pipeline{
 	 }
 	 stage('docker run'){
 	     steps{
-		 sh 'docker run -d -p 9191:8081 --name spring-container 8485012281/spring-img'
+		 sh 'docker run -d -p 9191:8080 --name spring-container 8485012281/spring-img'
 		 sh 'sleep 30'
 		 sh 'docker ps'
 	     }
