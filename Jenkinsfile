@@ -44,7 +44,7 @@ pipeline{
 	
 	 stage('docker build'){
 	     steps{
-		 sh'docker build -t spring-img .'
+		 sh'docker build -t 8485012281/spring-img .'
 		// sh 'docker build -t spring-img --build-arg dokcerjob=$JOB_NAME .'
 	     }
 	 } 
