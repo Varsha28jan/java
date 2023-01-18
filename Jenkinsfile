@@ -15,7 +15,7 @@ pipeline{
     
     
         
-        stage('maven location') {
+      /*  stage('maven location') {
              steps {
             
                 sh'''
@@ -28,7 +28,7 @@ pipeline{
               
                   '''
              }
-         }
+         }*/
 	
 	stage('	Copy War file'){
 	     steps{
