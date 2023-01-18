@@ -30,7 +30,14 @@ pipeline{
              }
          }
 	
-		    
+	stage('	Copy War file'){
+	     steps{
+		 sh'pwd'    
+		 sh'cp /var/lib/jenkins/workspace/$JOB_NAME/demo/target/*.war .'
+		 sh'ls'    
+		// sh 'docker build -t spring-img --build-arg dokcerjob=$JOB_NAME .'
+	     }
+	 } 	    
 	
 	    
 	
